@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg: #979DA7;
+  --cabecera: #F1F3EF;
+  --headerborder: #2E3C54;
+  --maincolor: #2E3C54
+}
+
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5rem;
+}
+
+body{
+  -background: var(--bg);
+}
+
+section{
+  padding: 2rem 7%;
+}
+
+header{
+  background: var(--cabecera);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: var(--maincolor);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background: #1174bb;
+    cursor: pointer;
+}
+
+
+/*cabecera*/
+
+
+
+.cabecera .logo img {
+  height: 4rem;
+}
+
+.cabecera .navegador a{
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  color: var(--maincolor);
+}
+
+.cabecera .navegador a:hover{
+  color: var(--maincolor);
+  border-bottom: .1rem solid var(--maincolor);
+  padding-bottom: .5rem;
+}
+
+.cabecera .nav-iconos div{
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+}
+
+.cabecera .nav-iconos div: hover{
+  color: var(--maincolor);
+}
+
+#menu-btn{
+  display: none;
+}
+
+.cabecera .formatoBusqueda{
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.cabecera .formatoBusqueda.active{
+  transform: scaleY(1);
+  
+}
+
+.cabecera .formatoBusqueda input{
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: #000;
+  padding: 1rem;
+  text-transform: none;
+}
+
+.cabecera .formatoBusqueda label{
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: #000;
+}
+
+.cabecera .formatoBusqueda label:hover{
+  color: var(--maincolor);
+}
+
+
+
+
+/*Dimensiones variables*/
+
+@media (max-width: 991px){
+
+  html {
+   font-size: 55%;
+      }
+  .cabecera{
+    padding: 1.5rem 2rem;
+  }   
+
+  #menu-btn{
+    display: inline-block;
+  }
+
+  section{
+  padding: 2rem;
+  }
+
+  .cabecera .navegador{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: #fff;
+    width: 20rem;
+    height: calc(100vh - 9.5rem);
+  }
+
+  .cabecera .navegador.active{
+    right: 0;
+   
+  }
+
+  .cabecera .navegador a{
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 2rem;
+  }
+
+  .cabecera .formatoBusqueda{
+    width: 90%;
+    right: 2rem;
+
+  }
+
+  .home{
+    background-position: left;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home .contenido h3{
+    font-size: 4.5rem;
+  }
+
+  .home .contenido p{
+    font-size: 1.5rem;
+  }
+}
+
+
+/**Seccion principal**/
+
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(18, 0, 71, 0.7), rgba(73, 99, 193, 0.7)), url("https://i.imgur.com/bAAh7rQ.jpg");
+  /**background: url(https://i.imgur.com/bAAh7rQ.jpg) no-repeat;**/
+  background-size: cover;
+  background-position: center;
+}
+
+.home .contenido{
+  max-width: 60rem;
+}
+
+.home .contenido h3{
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.home .contenido p{
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #eee;
+}
