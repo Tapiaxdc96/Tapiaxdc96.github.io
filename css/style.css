@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg: #979DA7;
+  --bg: #eaeded;
   --cabecera: #F1F3EF;
   --headerborder: #2E3C54;
   --maincolor: #2E3C54
@@ -27,7 +27,7 @@ html {
   scroll-behavior: smooth;
 }
 
-html::-webkit-scrollbar {
+/**html::-webkit-scrollbar {
   width: .8rem;
 }
 
@@ -39,9 +39,9 @@ html::-webkit-scrollbar-thumb {
   background: #fff;
   border-radius: 5rem;
 }
-
+**/
 body{
-  -background: var(--bg);
+  background: var(--bg);
 }
 
 section{
@@ -238,4 +238,80 @@ header{
   line-height: 1.8;
   padding: 1rem 0;
   color: #eee;
+}
+
+
+/** Home Seccion Ofertas **/
+
+.ofertashome h1{
+  padding-bottom: 1.5rem;
+  font-size: 5.5rem;
+  text-align: center;
+
+}
+
+.ofertashome .contenedor{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.ofertashome .contenedor .box{
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+}
+
+.ofertashome .contenedor .iconos a{
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  border: .1rem solid #92a4c3;
+  color: #000;
+  margin: .3rem;
+  
+}
+
+
+.ofertashome .contenedor .iconos a: hover{
+  background: var(--maincolor);
+}
+
+.ofertashome .contenedor .box .imagen{
+  padding: 2.5rem 0;
+
+}
+
+.ofertashome .contenedor .box .imagen img{
+  height: 25rem;
+
+}
+
+.ofertashome .contenedor .box .contenido h3{
+  color: #000;
+  font-size: 2rem;
+
+}
+
+.ofertashome .contenedor .box .contenido .estrellas{
+  padding: 1.5rem;
+
+}
+
+.ofertashome .contenedor .box .contenido .estrellas i{
+  font-size: 1.7rem;
+  color: #F0B921;
+}
+
+.ofertashome .contenedor .box .contenido .precio{
+  font-size: 2.5rem;
+  color: #000;
+}
+
+.ofertashome .contenedor .box .contenido .precioanterior span{
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  font-weight: lighter;
+  color: #000;
 }
