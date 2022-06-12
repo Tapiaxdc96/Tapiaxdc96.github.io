@@ -27,19 +27,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/**html::-webkit-scrollbar {
-  width: .8rem;
-}
-
-html::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-html::-webkit-scrollbar-thumb {
-  background: #fff;
-  border-radius: 5rem;
-}
-**/
 body{
   background: var(--bg);
 }
@@ -60,6 +47,7 @@ header{
   left: 0;
   right: 0;
   z-index: 1000;
+  box-shadow: 0px 0px 8px rgba(0,0,0,.6);
 }
 
 .btn{
@@ -148,7 +136,7 @@ header{
 
 
 
-/*Dimensiones variables*/
+/*Dimensiones variables inicio*/
 
 @media (max-width: 991px){
 
@@ -207,8 +195,24 @@ header{
   .home .contenido p{
     font-size: 1.5rem;
   }
+
+  .zonagamer{
+    text-align: center;
+    justify-content: center;
+  }
+
+  .zonagamer .contenido h3{
+    font-size: 1rem;
+  }
+
+  .zonagamer .contenido p{
+    font-size: 0.5rem;
+    }
+
+
 }
 
+/*Dimensiones variables final*/
 
 /**Seccion principal**/
 
@@ -217,7 +221,6 @@ header{
   display: flex;
   align-items: center;
   background: linear-gradient(rgba(18, 0, 71, 0.7), rgba(73, 99, 193, 0.7)), url("../images/homecover.jpg");
-  /**background: url(https://i.imgur.com/bAAh7rQ.jpg) no-repeat;**/
   background-size: cover;
   background-position: center;
 }
@@ -245,22 +248,18 @@ header{
 
 .ofertashome h1{
   padding-bottom: 1.5rem;
-  font-size: 5.5rem;
+  font-size: 5rem;
   text-align: center;
 
 }
 
 .ofertashome .contenedor{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
 }
 
-.ofertashome .contenedor .box{
-  text-align: center;
-  padding: 2rem;
-  background: #fff;
-}
+
 
 .ofertashome .contenedor .iconos a{
   height: 5rem;
@@ -270,27 +269,41 @@ header{
   border: .1rem solid #92a4c3;
   color: #000;
   margin: .3rem;
-  
 }
 
+.ofertashome .contenedor .box{
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+}
 
 .ofertashome .contenedor .iconos a: hover{
   background: var(--maincolor);
 }
 
 .ofertashome .contenedor .box .imagen{
-  padding: 2.5rem 0;
+  padding: 3rem;
 
 }
 
 .ofertashome .contenedor .box .imagen img{
-  height: 25rem;
+  height: 100%;
+  width: 100%;
+  
 
 }
 
 .ofertashome .contenedor .box .contenido h3{
   color: #000;
   font-size: 2rem;
+  display: -webkit-box;
+  max-width: 400px;
+  height: 100px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.625;
 
 }
 
@@ -314,4 +327,74 @@ header{
   text-decoration: line-through;
   font-weight: lighter;
   color: #000;
+}
+
+/**Seccion zona gamer**/
+
+.zonagamer{
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/zonagamercover.jpg");
+  min-height: 50vh;
+  display: flex;
+  background-position: center;
+  background-size: cover;
+}
+
+.zonagamer .contenido{
+  max-width: 40rem;
+}
+
+.zonagamer .contenido .consolas .texto h3{
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.zonagamer .contenido .consolas .texto p{
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #eee;
+}
+
+.zonagamer .contenido {.
+  justify-content: right;
+  align-items: right;
+}
+
+
+.zonagamer .contenido .consolas img{
+  padding: 2rem;
+  background: #fff;
+  padding: 2rem;
+  max-width: 150px;
+}
+.zonagamer .contenido .consolas{
+  display: grid;
+  grid-template-columns: auto;
+  gap: 5rem;
+}
+.zonagamer .contenido .consolas .texto{
+  grid-column: 1;
+}
+
+.zonagamer .contenido .consolas .xbox{
+  grid-column: 6;
+}
+
+.zonagamer .contenido .consolas .playstation{
+  grid-column: 7;
+}
+
+.zonagamer .contenido .consolas .nintendo{
+  grid-column: 8;
+}
+
+
+/**Seccion pie de pagina**/
+
+.footer{
+  font-size: 1rem;
+  text-align: center;
+  
 }
