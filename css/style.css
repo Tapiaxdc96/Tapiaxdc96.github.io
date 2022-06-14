@@ -374,21 +374,7 @@ header{
   grid-template-columns: auto;
   gap: 5rem;
 }
-.zonagamer .contenido .consolas .texto{
-  grid-column: 1;
-}
 
-.zonagamer .contenido .consolas .xbox{
-  grid-column: 6;
-}
-
-.zonagamer .contenido .consolas .playstation{
-  grid-column: 7;
-}
-
-.zonagamer .contenido .consolas .nintendo{
-  grid-column: 8;
-}
 
 
 /**Seccion pie de pagina**/
