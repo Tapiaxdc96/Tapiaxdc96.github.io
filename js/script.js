@@ -28,12 +28,3 @@ window.onscroll = () =>{
     input.value = '';
     
 }
-
-// Cerrar los menus cuando el usuario da click afuera de los cuadros
-// window.addEventListener('mouseup',function(event){
-//        if(event.target != formatoBusqueda && event.target.parentNode != formatoBusqueda){
-//            navegador.classList.remove('active');
-//   		formatoBusqueda.classList.remove('active');
-//    		input.value = '';
-//        }
-//  });  

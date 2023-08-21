@@ -87,7 +87,7 @@ header{
   margin-left: 2rem;
 }
 
-.cabecera .nav-iconos div: hover{
+.cabecera .nav-iconos div:hover{
   color: var(--maincolor);
 }
 
@@ -277,7 +277,7 @@ header{
   background: #fff;
 }
 
-.ofertashome .contenedor .iconos a: hover{
+.ofertashome .contenedor .iconos a:hover{
   background: var(--maincolor);
 }
 
@@ -357,11 +357,10 @@ header{
   color: #eee;
 }
 
-.zonagamer .contenido {.
-  justify-content: right;
-  align-items: right;
+.zonagamer .contenido{
+  justify-content:right;
+  align-items:right;
 }
-
 
 .zonagamer .contenido .consolas img{
   padding: 2rem;
